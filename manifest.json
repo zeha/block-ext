@@ -1,0 +1,9 @@
+{
+  "name": "NoTrack",
+  "version": "0.1",
+  "description": "tracktrack",
+  "background_page": "bg.html",
+  "permissions": [
+    "experimental"
+  ]
+}
