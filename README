@@ -1,0 +1,4 @@
+VerySimple(TM) Chrome Extension to block some URLs.
+
+chrome://extensions/ can directly load unpacked extensions.
+You must enable "Experimental Extension APIs" on chrome://flags/ first.
