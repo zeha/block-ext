@@ -12,6 +12,7 @@ chrome.experimental.webRequest.onBeforeRequest.addListener(
     if (!c) c = details.url.indexOf("://platform.linkedin.com/") != -1;
     if (!c) c = details.url.indexOf("://urls.api.twitter.com/") != -1;
     if (!c) c = details.url.indexOf("://apis.google.com/js") != -1;
+    if (!c) c = details.url.indexOf("://d1ros97qkrwjf5.cloudfront.net") != -1; /* new relic */
     return {cancel: c};
   },
   {},
