@@ -4,10 +4,12 @@ chrome.experimental.webRequest.onBeforeRequest.addListener(
   function(details) {
     var c = false;
     if (!c) c = details.url.indexOf("://www.google-analytics.com/") != -1;
-    if (!c) c = details.url.indexOf("://www.facebook.com/plugins/") != -1;
+    if (!c) c = details.url.indexOf("://ssl.google-analytics.com/") != -1;
+    if (!c) c = details.url.indexOf("://www.facebook.com") != -1;
     if (!c) c = details.url.indexOf("oewabox.at/") != -1;
     if (!c) c = details.url.indexOf("ivwbox.de/") != -1;
     if (!c) c = details.url.indexOf("://platform.twitter.com/widgets") != -1;
+    if (!c) c = details.url.indexOf("://platform.linkedin.com/") != -1;
     if (!c) c = details.url.indexOf("://urls.api.twitter.com/") != -1;
     if (!c) c = details.url.indexOf("://apis.google.com/js") != -1;
     return {cancel: c};
