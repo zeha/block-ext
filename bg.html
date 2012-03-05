@@ -1,6 +1,5 @@
 <script>
-/* lulzjs */
-chrome.experimental.webRequest.onBeforeRequest.addListener(
+chrome.webRequest.onBeforeRequest.addListener(
   function(details) {
     var c = false;
     if (!c) c = details.url.indexOf("://www.google-analytics.com/") != -1;
@@ -15,6 +14,6 @@ chrome.experimental.webRequest.onBeforeRequest.addListener(
     if (!c) c = details.url.indexOf("://d1ros97qkrwjf5.cloudfront.net") != -1; /* new relic */
     return {cancel: c};
   },
-  {},
+  {urls: ["<all_urls>"]},
   ["blocking"]);
-</script>
+  </script>

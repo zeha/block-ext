@@ -4,6 +4,8 @@
   "description": "tracktrack",
   "background_page": "bg.html",
   "permissions": [
-    "experimental"
+    "webRequest",
+	"webRequestBlocking",
+	"<all_urls>"
   ]
 }
